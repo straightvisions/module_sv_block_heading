@@ -44,6 +44,7 @@
 
 		$font_family				= false;
 		$font_weight				= false;
+
 		foreach($value as $breakpoint => $val) {
 			if($val) {
 				$f							= $setting->get_parent()->get_module('sv_webfontloader')->get_font_by_label($val);
@@ -54,7 +55,8 @@
 				$font_weight[$breakpoint]	= false;
 			}
 		}
-		if(isset($font['family'])){
+
+		if($font_family){
 			$properties['font-family']	= $setting->prepare_css_property_responsive($font_family,'',', sans-serif;');
 			$properties['font-weight']	= $setting->prepare_css_property_responsive($font_weight,'','');
 		}
