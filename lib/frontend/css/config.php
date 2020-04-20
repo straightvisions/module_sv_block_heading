@@ -133,7 +133,7 @@
 		}
 
 		echo $setting->build_css(
-			'.sv100_sv_content_wrapper article h'.$i.', .block-editor .editor-styles-wrapper h'.$i,
+			is_admin() ? '.editor-styles-wrapper h'.$i : '.sv100_sv_content_wrapper article h'.$i,
 			$properties
 		);
 
