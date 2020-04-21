@@ -56,7 +56,7 @@
 			}
 		}
 
-		if($font_family){
+		if($font_family && (count(array_unique($font_family)) > 1 || array_unique($font_family)['mobile'] !== false)){
 			$properties['font-family']	= $setting->prepare_css_property_responsive($font_family,'',', sans-serif;');
 			$properties['font-weight']	= $setting->prepare_css_property_responsive($font_weight,'','');
 		}
@@ -133,7 +133,7 @@
 		}
 
 		echo $setting->build_css(
-			is_admin() ? '.editor-styles-wrapper h'.$i : '.sv100_sv_content_wrapper article h'.$i,
+			is_admin() ? '.edit-post-visual-editor.editor-styles-wrapper h'.$i : '.sv100_sv_content_wrapper article h'.$i,
 			$properties
 		);
 
