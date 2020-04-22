@@ -93,12 +93,8 @@
 			return $this;
 		}
 		public function enqueue_scripts(): sv_block_heading {
-			if( ! is_admin() ) {
-				$post = get_post();
-
-				if ( !has_block( 'heading', $post )) {
-					return $this;
-				}
+			if(!$this->has_block_frontend('heading')){
+				return $this;
 			}
 
 			$this->get_script( 'default' )->set_is_enqueued();
