@@ -78,9 +78,9 @@
 
 		protected function register_scripts(): sv_block_heading {
 			// Register Styles
-			$this->get_script( 'default' )
+			$this->get_script( 'common' )
 				->set_is_gutenberg()
-				->set_path( 'lib/frontend/css/default.css' );
+				->set_path( 'lib/frontend/css/common.css' );
 
 			$this->get_script( 'config' )
 				->set_is_gutenberg()
@@ -97,7 +97,7 @@
 				return $this;
 			}
 
-			$this->get_script( 'default' )->set_is_enqueued();
+			$this->get_script( 'common' )->set_is_enqueued();
 			$this->get_script( 'config' )->set_is_enqueued();
 
 			return $this;
