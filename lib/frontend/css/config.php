@@ -68,12 +68,12 @@
 		if($value) {
 			$imploded		= false;
 			foreach($value as $breakpoint => $val) {
-				$top = (isset($val['top']) && strlen($val['top']) > 0) ? $val['top'] : 0;
-				$right = (isset($val['right']) && strlen($val['right']) > 0) ? $val['right'] : 0;
-				$bottom = (isset($val['bottom']) && strlen($val['bottom']) > 0) ? $val['bottom'] : 0;
-				$left = (isset($val['left']) && strlen($val['left']) > 0) ? $val['left'] : 0;
+				$top = (isset($val['top']) && strlen($val['top']) > 0) ? $val['top'] : false;
+				$right = (isset($val['right']) && strlen($val['right']) > 0) ? $val['right'] : false;
+				$bottom = (isset($val['bottom']) && strlen($val['bottom']) > 0) ? $val['bottom'] : false;
+				$left = (isset($val['left']) && strlen($val['left']) > 0) ? $val['left'] : false;
 
-				if($top+$right+$bottom+$left!==0) {
+				if($top !== false || $right !== false || $bottom !== false || $left !== false) {
 					$imploded[$breakpoint] = $top . ' ' . $right . ' ' . $bottom . ' ' . $left;
 				}
 			}
@@ -90,12 +90,12 @@
 		if($value) {
 			$imploded		= false;
 			foreach($value as $breakpoint => $val) {
-				$top = (isset($val['top']) && strlen($val['top']) > 0) ? $val['top'] : 0;
-				$right = (isset($val['right']) && strlen($val['right']) > 0) ? $val['right'] : 0;
-				$bottom = (isset($val['bottom']) && strlen($val['bottom']) > 0) ? $val['bottom'] : 0;
-				$left = (isset($val['left']) && strlen($val['left']) > 0) ? $val['left'] : 0;
+				$top = (isset($val['top']) && strlen($val['top']) > 0) ? $val['top'] : false;
+				$right = (isset($val['right']) && strlen($val['right']) > 0) ? $val['right'] : false;
+				$bottom = (isset($val['bottom']) && strlen($val['bottom']) > 0) ? $val['bottom'] : false;
+				$left = (isset($val['left']) && strlen($val['left']) > 0) ? $val['left'] : false;
 
-				if($top+$right+$bottom+$left!==0) {
+				if($top !== false || $right !== false || $bottom !== false || $left !== false) {
 					$imploded[$breakpoint] = $top . ' ' . $right . ' ' . $bottom . ' ' . $left;
 				}
 			}
