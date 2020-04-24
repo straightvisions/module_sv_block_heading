@@ -1,9 +1,9 @@
-.edit-post-visual-editor.editor-styles-wrapper h1, .sv100_sv_content_wrapper article h1,
-.edit-post-visual-editor.editor-styles-wrapper h2, .sv100_sv_content_wrapper article h2,
-.edit-post-visual-editor.editor-styles-wrapper h3, .sv100_sv_content_wrapper article h3,
-.edit-post-visual-editor.editor-styles-wrapper h4, .sv100_sv_content_wrapper article h4,
-.edit-post-visual-editor.editor-styles-wrapper h5, .sv100_sv_content_wrapper article h5,
-.edit-post-visual-editor.editor-styles-wrapper h6, .sv100_sv_content_wrapper article h6
+.edit-post-visual-editor.editor-styles-wrapper > h1, .sv100_sv_content_wrapper article > h1,
+.edit-post-visual-editor.editor-styles-wrapper > h2, .sv100_sv_content_wrapper article > h2,
+.edit-post-visual-editor.editor-styles-wrapper > h3, .sv100_sv_content_wrapper article > h3,
+.edit-post-visual-editor.editor-styles-wrapper > h4, .sv100_sv_content_wrapper article > h4,
+.edit-post-visual-editor.editor-styles-wrapper > h5, .sv100_sv_content_wrapper article > h5,
+.edit-post-visual-editor.editor-styles-wrapper > h6, .sv100_sv_content_wrapper article > h6
 {
 	max-width:var( --sv100_sv_common-max-width-txt );
 }
