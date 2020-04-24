@@ -58,6 +58,12 @@
 				$this->get_setting( 'h'.$i.'_margin' )
 					->set_title( __( 'Margin', 'sv100' ) )
 					->set_is_responsive(true)
+					->set_default_value(array(
+						'top'		=> '20px',
+						'right'		=> 'auto',
+						'bottom'	=> '10px',
+						'left'		=> 'auto'
+					))
 					->load_type( 'margin' );
 
 				$this->get_setting( 'h'.$i.'_padding' )
