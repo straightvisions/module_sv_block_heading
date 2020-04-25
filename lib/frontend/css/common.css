@@ -5,5 +5,5 @@
 .edit-post-visual-editor.editor-styles-wrapper > h5, .sv100_sv_content_wrapper article > h5,
 .edit-post-visual-editor.editor-styles-wrapper > h6, .sv100_sv_content_wrapper article > h6
 {
-	max-width:var( --sv100_sv_common-max-width-txt );
+	max-width:var( --sv100_sv_common-max-width-text );
 }
