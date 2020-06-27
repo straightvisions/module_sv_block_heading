@@ -27,6 +27,18 @@
 		}
 
 		protected function load_settings(): sv_block_heading {
+			/* font size calculation for headings */
+			$default_font_sizes             = array([],[],[],[],[],[],[]);
+			$common_font_size               = $this->get_module( 'sv_common' )->get_setting('font_size')->get_data();
+			$default_font_sizes_multiplier  = array(
+				1=> 2.5,
+				2=> 2,
+				3=> 2,
+				4=> 1.5,
+				5=> 1.25,
+				6=> 1,
+			);
+			
 			$i = 1;
 			while ($i <= 6) {
 				$this->get_setting( 'h'.$i.'_font_family' )
@@ -35,11 +47,16 @@
 					->set_options( $this->get_module( 'sv_webfontloader' )->get_font_options() )
 					->set_is_responsive(true)
 					->load_type( 'select' );
-
+				
+				/* font size calculation with support for every breakpoint */
+				foreach($common_font_size as $key => $val){
+					$default_font_sizes[$i][$key] = $val * $default_font_sizes_multiplier[$i];
+				}
+				
 				$this->get_setting( 'h'.$i.'_font_size' )
 					->set_title( __( 'Font Size', 'sv100' ) )
-					->set_description( __( 'Font Size in pixel.', 'sv100' ) )
-					->set_default_value( 16 )
+					->set_description( __( 'Font Size in Pixel.', 'sv100' ) )
+					->set_default_value( $default_font_sizes[$i] )
 					->set_is_responsive(true)
 					->load_type( 'number' );
 
@@ -59,9 +76,9 @@
 					->set_title( __( 'Margin', 'sv100' ) )
 					->set_is_responsive(true)
 					->set_default_value(array(
-						'top'		=> '20px',
+						'top'		=> '30px',
 						'right'		=> 'auto',
-						'bottom'	=> '10px',
+						'bottom'	=> '20px',
 						'left'		=> 'auto'
 					))
 					->load_type( 'margin' );
