@@ -7,3 +7,12 @@
 {
 	max-width:var( --sv100_sv_common-max-width-text );
 }
+
+.edit-post-visual-editor.editor-styles-wrapper .wp-block-cover h1:not(.has-text-color),
+.edit-post-visual-editor.editor-styles-wrapper .wp-block-cover h2:not(.has-text-color),
+.edit-post-visual-editor.editor-styles-wrapper .wp-block-cover h3:not(.has-text-color),
+.edit-post-visual-editor.editor-styles-wrapper .wp-block-cover h4:not(.has-text-color),
+.edit-post-visual-editor.editor-styles-wrapper .wp-block-cover h5:not(.has-text-color),
+.edit-post-visual-editor.editor-styles-wrapper .wp-block-cover h6:not(.has-text-color){
+	color:inherit;
+}
