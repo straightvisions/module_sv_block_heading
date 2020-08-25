@@ -6,6 +6,10 @@
 			<?php
 				echo $module->get_setting( 'h'.$i.'_font_family' )->form();
 				echo $module->get_setting( 'h'.$i.'_font_size' )->form();
+			?>
+		</div>
+		<div class="sv_setting_flex">
+			<?php
 				echo $module->get_setting( 'h'.$i.'_line_height' )->form();
 				echo $module->get_setting( 'h'.$i.'_text_color' )->form();
 			?>
