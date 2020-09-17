@@ -125,9 +125,6 @@
 				->set_is_gutenberg()
 				->set_path( 'lib/frontend/css/no_margin.css' );
 
-			add_action('wp', array($this,'enqueue_scripts'));
-			add_action('admin_init', array($this,'enqueue_scripts'));
-
 			return $this;
 		}
 		public function enqueue_scripts(): sv_block_heading {
