@@ -5,9 +5,10 @@
 		<?php
 			$i = 1;
 			while ($i <= 6) {
-				require( $module->get_path( 'lib/backend/tpl/subpage_heading.php' ) );
+				require( $module->get_path( 'lib/backend/tpl/general.php' ) );
 				$i++;
 			}
 		?>
 	</div>
-<?php } ?>
+	<?php
+}
