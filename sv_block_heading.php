@@ -28,7 +28,7 @@
 
 		protected function load_settings(): sv_block_heading {
 			/* font size calculation for headings */
-			$default_font_sizes             = array([],[],[],[],[],[],[]);
+			$default_font_sizes             = array(array(),array(),array(),array(),array(),array(),array());
 			$common_font_size               = $this->get_module( 'sv_common' )->get_setting('font_size')->get_data();
 			$default_font_sizes_multiplier  = array(
 				1=> 2.5,
