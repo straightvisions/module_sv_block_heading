@@ -28,6 +28,8 @@
 					5 => 1.25,
 					6 => 1,
 				);
+			}else{
+				$common_font_size = false;
 			}
 			
 			$i = 1;
@@ -40,7 +42,7 @@
 					->load_type( 'select' );
 
 				$value = false;
-				if($this->get_module( 'sv_common' )) {
+				if($this->get_module( 'sv_common' ) && $common_font_size) {
 					/* font size calculation with support for every breakpoint */
 					foreach ($common_font_size as $key => $val) {
 						$value = $default_font_sizes[$i][$key] = $val * $default_font_sizes_multiplier[$i];
