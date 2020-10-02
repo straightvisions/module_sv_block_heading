@@ -5,7 +5,7 @@
 		<?php
 			$i = 1;
 			while ($i <= 6) {
-				require( $module->get_path( 'lib/backend/tpl/general.php' ) );
+				require( $module->get_path( 'lib/tpl/settings/general.php' ) );
 				$i++;
 			}
 		?>
