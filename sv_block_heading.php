@@ -103,6 +103,11 @@
 				->set_is_gutenberg()
 				->set_path( 'lib/css/common/style_no_margin.css' );
 
+			// Register Styles
+			$this->get_script( 'style_no_margin_vertical' )
+				->set_is_gutenberg()
+				->set_path( 'lib/css/common/style_no_margin_vertical.css' );
+
 			return $this;
 		}
 		public function enqueue_scripts(): sv_block_heading {
