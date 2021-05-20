@@ -4,6 +4,7 @@
 		echo $_s->build_css(
 			is_admin() ? '.editor-styles-wrapper h'.$i.'.wp-block' : '.sv100_sv_content_wrapper article h'.$i,
 			array_merge(
+				$module->get_setting('h'.$i.'_hyphens')->get_css_data('hyphens'),
 				$module->get_setting('h'.$i.'_font_family')->get_css_data('font-family'),
 				$module->get_setting('h'.$i.'_font_size')->get_css_data('font-size','','px'),
 				$module->get_setting('h'.$i.'_line_height')->get_css_data('line-height'),

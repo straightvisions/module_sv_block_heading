@@ -34,6 +34,18 @@
 			
 			$i = 1;
 			while ($i <= 6) {
+				$this->get_setting( 'h'.$i.'_hyphens' )
+					->set_title( __( 'Hyphens', 'sv100' ) )
+					->set_description( __( 'Choose hyphens behavior.', 'sv100' ) )
+					->set_options(array(
+						'none'		=> __('none', 'sv100'),
+						'manual'	=> __('manual', 'sv100'),
+						'auto'		=> __('auto', 'sv100')
+					))
+					->set_default_value( 'manual' )
+					->set_is_responsive(true)
+					->load_type( 'select' );
+
 				$this->get_setting( 'h'.$i.'_font_family' )
 					->set_title( __( 'Font Family', 'sv100' ) )
 					->set_description( __( 'Choose a font for your text.', 'sv100' ) )
