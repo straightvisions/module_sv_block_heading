@@ -16,22 +16,6 @@
 		}
 
 		protected function load_settings(): sv_block_heading {
-			/* font size calculation for headings */
-			if($this->get_module( 'sv_common' )) {
-				$default_font_sizes = array([], [], [], [], [], [], []);
-				$common_font_size = $this->get_module('sv_common')->get_setting('font_size')->get_data();
-				$default_font_sizes_multiplier = array(
-					1 => 2.5,
-					2 => 2,
-					3 => 2,
-					4 => 1.5,
-					5 => 1.25,
-					6 => 1,
-				);
-			}else{
-				$common_font_size = false;
-			}
-			
 			$i = 1;
 			while ($i <= 6) {
 				$this->get_setting( 'h'.$i.'_hyphens' )
@@ -54,10 +38,21 @@
 					->load_type( 'select' );
 
 				$value = false;
-				if($this->get_module( 'sv_common' ) && is_array($common_font_size) && count($common_font_size) > 0) {
+				if($this->get_module( 'sv_common' )) {
 					/* font size calculation with support for every breakpoint */
-					foreach ($common_font_size as $key => $val) {
-						$value = $default_font_sizes[$i][$key] = $val * $default_font_sizes_multiplier[$i];
+					foreach ($this->get_module('sv_common')->get_setting('font_size')->get_data() as $key => $val) {
+						$default_font_sizes_multiplier = array(
+							1 => 2.5,
+							2 => 2,
+							3 => 2,
+							4 => 1.5,
+							5 => 1.25,
+							6 => 1,
+						);
+						$default_font_sizes		= array([], [], [], [], [], [], []);
+						$multiplier				= $default_font_sizes_multiplier[$i];
+						$value					= $default_font_sizes[$i][$key] =
+							floatval($val) * floatval($multiplier);
 					}
 				}
 				
