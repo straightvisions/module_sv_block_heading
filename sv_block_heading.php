@@ -38,7 +38,7 @@
 					->load_type( 'select' );
 
 				$value = false;
-				if($this->get_module( 'sv_common' )) {
+				if($this->get_module( 'sv_common' ) && $this->get_module('sv_common')->get_setting('font_size') && is_array($this->get_module('sv_common')->get_setting('font_size')->get_data())) {
 					/* font size calculation with support for every breakpoint */
 					foreach ($this->get_module('sv_common')->get_setting('font_size')->get_data() as $key => $val) {
 						$default_font_sizes_multiplier = array(
