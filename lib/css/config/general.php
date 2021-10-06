@@ -2,7 +2,7 @@
 	$i = 1;
 	while ($i <= 6) {
 		echo $_s->build_css(
-			is_admin() ? '.editor-styles-wrapper h'.$i.'.wp-block' : '.sv100_sv_content_wrapper article h'.$i,
+			is_admin() ? '.editor-styles-wrapper h'.$i.'.wp-block' : 'h'.$i,
 			array_merge(
 				$module->get_setting('h'.$i.'_hyphens')->get_css_data('hyphens'),
 				$module->get_setting('h'.$i.'_font_family')->get_css_data('font-family'),

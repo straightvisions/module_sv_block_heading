@@ -1,19 +1,18 @@
-.editor-styles-wrapper > h1, .sv100_sv_content_wrapper article > h1,
-.editor-styles-wrapper > h2, .sv100_sv_content_wrapper article > h2,
-.editor-styles-wrapper > h3, .sv100_sv_content_wrapper article > h3,
-.editor-styles-wrapper > h4, .sv100_sv_content_wrapper article > h4,
-.editor-styles-wrapper > h5, .sv100_sv_content_wrapper article > h5,
-.editor-styles-wrapper > h6, .sv100_sv_content_wrapper article > h6
-{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
 	max-width:var( --sv100_sv_common-max-width-text );
 }
 
-.editor-styles-wrapper .wp-block-cover h1:not(.has-text-color),
-.editor-styles-wrapper .wp-block-cover h2:not(.has-text-color),
-.editor-styles-wrapper .wp-block-cover h3:not(.has-text-color),
-.editor-styles-wrapper .wp-block-cover h4:not(.has-text-color),
-.editor-styles-wrapper .wp-block-cover h5:not(.has-text-color),
-.editor-styles-wrapper .wp-block-cover h6:not(.has-text-color){
+.wp-block-cover h1:not(.has-text-color),
+.wp-block-cover h2:not(.has-text-color),
+.wp-block-cover h3:not(.has-text-color),
+.wp-block-cover h4:not(.has-text-color),
+.wp-block-cover h5:not(.has-text-color),
+.wp-block-cover h6:not(.has-text-color){
 	color:inherit;
 }
 
