@@ -7,15 +7,6 @@ h6{
 	max-width:var( --sv100_sv_common-max-width-text );
 }
 
-.wp-block-cover h1:not(.has-text-color),
-.wp-block-cover h2:not(.has-text-color),
-.wp-block-cover h3:not(.has-text-color),
-.wp-block-cover h4:not(.has-text-color),
-.wp-block-cover h5:not(.has-text-color),
-.wp-block-cover h6:not(.has-text-color){
-	color:inherit;
-}
-
 h1.has-background,
 h2.has-background,
 h3.has-background,
