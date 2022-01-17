@@ -4,6 +4,8 @@
 		echo $_s->build_css(
 			is_admin() ? '.editor-styles-wrapper h'.$i.'.wp-block-heading' : 'h'.$i,
 			array_merge(
+				$module->get_setting('h'.$i.'_hyphens')->get_css_data('-webkit-hyphens'),
+				$module->get_setting('h'.$i.'_hyphens')->get_css_data('-moz-hyphens'),
 				$module->get_setting('h'.$i.'_hyphens')->get_css_data('hyphens'),
 				$module->get_setting('h'.$i.'_font_family')->get_css_data('font-family'),
 				$module->get_setting('h'.$i.'_font_size')->get_css_data('font-size','','px'),
