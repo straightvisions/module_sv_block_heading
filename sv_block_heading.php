@@ -118,6 +118,10 @@
 			     ->set_is_gutenberg()
 			     ->set_path( 'lib/css/common/style_no_margin_right.css' );
 
+			$this->get_script( 'style_no_margin' )
+				->set_is_gutenberg()
+				->set_path( 'lib/css/common/style_no_margin.css' );
+
 			return $this;
 		}
 		public function enqueue_scripts(): sv_block_heading {
