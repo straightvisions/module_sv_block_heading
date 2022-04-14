@@ -6,7 +6,7 @@
 	while ($i <= 6) {
 		
 		$selector_editor =
-			'editor-styles-wrapper h'.$i.'.wp-block-heading'
+			'.editor-styles-wrapper h'.$i.'.wp-block-heading'
 			.', .editor-styles-wrapper h1.wp-block-heading.is-style-h'.$i
 			.', .editor-styles-wrapper h2.wp-block-heading.is-style-h'.$i
 			.', .editor-styles-wrapper h3.wp-block-heading.is-style-h'.$i
