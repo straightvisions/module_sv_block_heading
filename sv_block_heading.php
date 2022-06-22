@@ -12,6 +12,7 @@
 				->set_section_order(5000)
 				->set_section_icon('<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 1h24v2h-24v-2zm0 6h24v-2h-24v2zm0 7h24v-4h-24v4zm0 5h24v-2h-24v2zm0 4h24v-2h-24v2z"/></svg>')
 				->set_block_handle('wp-block-heading')
+				->set_block_name('core/heading')
 				->get_root()
 				->add_section( $this );
 		}
@@ -107,21 +108,12 @@
 			parent::register_scripts();
 
 			// Register Styles
-			$this->get_script( 'style_no_margin_vertical' )
-				->set_is_gutenberg()
-				->set_path( 'lib/css/common/style_no_margin_vertical.css' );
-			
-			$this->get_script( 'style_no_margin_left' )
-			     ->set_is_gutenberg()
-			     ->set_path( 'lib/css/common/style_no_margin_left.css' );
-			
-			$this->get_script( 'style_no_margin_right' )
-			     ->set_is_gutenberg()
-			     ->set_path( 'lib/css/common/style_no_margin_right.css' );
-
-			$this->get_script( 'style_no_margin' )
-				->set_is_gutenberg()
-				->set_path( 'lib/css/common/style_no_margin.css' );
+			$this->get_script( 'h1' )->set_block_style(__('Like H1', 'sv100'));
+			$this->get_script( 'h2' )->set_block_style(__('Like H2', 'sv100'));
+			$this->get_script( 'h3' )->set_block_style(__('Like H3', 'sv100'));
+			$this->get_script( 'h4' )->set_block_style(__('Like H4', 'sv100'));
+			$this->get_script( 'h5' )->set_block_style(__('Like H5', 'sv100'));
+			$this->get_script( 'h6' )->set_block_style(__('Like H6', 'sv100'));
 
 			return $this;
 		}
