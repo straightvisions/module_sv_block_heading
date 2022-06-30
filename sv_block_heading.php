@@ -73,7 +73,6 @@
 
 				$this->get_setting( 'h'.$i.'_text_color' )
 					->set_title( __( 'Text Color', 'sv100' ) )
-					->set_default_value( '#1e1e1e' )
 					->set_is_responsive(true)
 					->load_type( 'color' );
 
