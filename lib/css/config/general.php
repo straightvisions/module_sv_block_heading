@@ -12,7 +12,8 @@
 			.', .editor-styles-wrapper h3.wp-block-heading.is-style-h'.$i
 			.', .editor-styles-wrapper h4.wp-block-heading.is-style-h'.$i
 			.', .editor-styles-wrapper h5.wp-block-heading.is-style-h'.$i
-			.', .editor-styles-wrapper h6.wp-block-heading.is-style-h'.$i;
+			.', .editor-styles-wrapper h6.wp-block-heading.is-style-h'.$i
+			.', .editor-styles-wrapper p.is-style-h'.$i;
 		
 		$selector_frontend =
 			'h'.$i
@@ -21,7 +22,8 @@
 			.', h3.is-style-h'.$i
 			.', h4.is-style-h'.$i
 			.', h5.is-style-h'.$i
-			.', h6.is-style-h'.$i;
+			.', h6.is-style-h'.$i
+			.', p.is-style-h'.$i;
 			
 		echo $_s->build_css(
 			is_admin() ? $selector_editor : $selector_frontend,
