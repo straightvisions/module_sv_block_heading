@@ -1,19 +1,17 @@
 <?php
 	
-	
-	
 	$i = 1;
 	while ($i <= 6) {
 		$selector =
-			'h'.$i
-			.', h1.is-style-h'.$i
-			.', h2.is-style-h'.$i
-			.', h3.is-style-h'.$i
-			.', h4.is-style-h'.$i
-			.', h5.is-style-h'.$i
-			.', h6.is-style-h'.$i
-			.', p.is-style-h'.$i;
-
+			'.wp-site-blocks h'.$i
+			.', .wp-site-blocks h1.is-style-h'.$i
+			.', .wp-site-blocks h2.is-style-h'.$i
+			.', .wp-site-blocks h3.is-style-h'.$i
+			.', .wp-site-blocks h4.is-style-h'.$i
+			.', .wp-site-blocks h5.is-style-h'.$i
+			.', .wp-site-blocks h6.is-style-h'.$i
+			.', .wp-site-blocks p.is-style-h'.$i;
+	
 		$selector .=
 			', .editor-styles-wrapper h'.$i
 			.', .editor-styles-wrapper h1.is-style-h'.$i
@@ -39,6 +37,6 @@
 				$module->get_setting('h'.$i.'_border')->get_css_data()
 			)
 		);
-
+	
 		$i++;
 	}
