@@ -1,8 +1,15 @@
-h1.has-background,
-h2.has-background,
-h3.has-background,
-h4.has-background,
-h5.has-background,
-h6.has-background{
+.wp-site-blocks h1.has-background,
+.wp-site-blocks h2.has-background,
+.wp-site-blocks h3.has-background,
+.wp-site-blocks h4.has-background,
+.wp-site-blocks h5.has-background,
+.wp-site-blocks h6.has-background,
+.editor-styles-wrapper h1.has-background,
+.editor-styles-wrapper h2.has-background,
+.editor-styles-wrapper h3.has-background,
+.editor-styles-wrapper h4.has-background,
+.editor-styles-wrapper h5.has-background,
+.editor-styles-wrapper h6.has-background
+{
 	padding: 20px;
 }
