@@ -4,5 +4,5 @@ h3.has-background,
 h4.has-background,
 h5.has-background,
 h6.has-background{
-	padding: 20px;
+	padding:var(--wp--custom--sv-spacing);
 }
