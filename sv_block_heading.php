@@ -114,6 +114,11 @@
 			$this->get_script( 'h5' )->set_block_style(__('Like H5', 'sv100'));
 			$this->get_script( 'h6' )->set_block_style(__('Like H6', 'sv100'));
 
+			// @todo: hotfix to load .is-style globally.
+			if(!is_admin()){
+				$this->get_script( 'config' )->set_inline();
+			}
+
 			return $this;
 		}
 	}
