@@ -5,7 +5,7 @@
 		public function init() {
 			$this->set_module_title( __( 'Block: Heading', 'sv100' ) )
 				->set_module_desc( __( 'Settings for Gutenberg Block', 'sv100' ) )
-				->set_css_cache_active()
+				->set_css_cache_active() // no cache
 				->set_section_title( $this->get_module_title() )
 				->set_section_desc( $this->get_module_desc() )
 				->set_section_template_path()
@@ -106,13 +106,9 @@
 		protected function register_scripts(): sv_block_heading {
 			parent::register_scripts();
 
-			// Register Styles
-			$this->get_script( 'h1' )->set_block_style(__('Like H1', 'sv100'));
-			$this->get_script( 'h2' )->set_block_style(__('Like H2', 'sv100'));
-			$this->get_script( 'h3' )->set_block_style(__('Like H3', 'sv100'));
-			$this->get_script( 'h4' )->set_block_style(__('Like H4', 'sv100'));
-			$this->get_script( 'h5' )->set_block_style(__('Like H5', 'sv100'));
-			$this->get_script( 'h6' )->set_block_style(__('Like H6', 'sv100'));
+			foreach(array(1,2,3,4,5,6) as $i){
+				$this->get_script( 'h'.$i )->set_path('lib/css/styles/like_h'.$i)->set_block_style(__('Like H'.$i, 'sv100'));
+			}
 
 			return $this;
 		}
