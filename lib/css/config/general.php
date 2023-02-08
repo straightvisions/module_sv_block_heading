@@ -30,8 +30,7 @@
 				$module->get_setting('h'.$i.'_line_height')->get_css_data('line-height'),
 				$module->get_setting('h'.$i.'_text_color')->get_css_data(),
 				$module->get_setting('h'.$i.'_padding')->get_css_data('padding'),
-				$module->get_setting('h'.$i.'_margin')->get_css_data(),
-				$module->get_setting('h'.$i.'_border')->get_css_data()
+				$module->get_setting('h'.$i.'_margin')->get_css_data()
 			)
 		);
 

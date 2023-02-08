@@ -92,11 +92,6 @@
 					->set_is_responsive(true)
 					->load_type( 'margin' );
 
-				$this->get_setting( 'h'.$i.'_border' )
-					->set_title( __( 'Border', 'sv100' ) )
-					->set_is_responsive(true)
-					->load_type( 'border' );
-
 				$i++;
 			}
 

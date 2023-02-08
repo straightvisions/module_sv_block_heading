@@ -21,10 +21,5 @@
 				echo $module->get_setting( 'h'.$i.'_padding' )->form();
 			?>
 		</div>
-		<div class="sv_setting_flex">
-			<?php
-				echo $module->get_setting( 'h'.$i.'_border' )->form();
-			?>
-		</div>
 	</div>
 <?php } ?>
