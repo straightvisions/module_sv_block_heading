@@ -102,7 +102,7 @@
 			parent::register_scripts();
 
 			foreach(array(1,2,3,4,5,6) as $i){
-				$this->get_script( 'h'.$i )->set_path('lib/css/styles/like_h'.$i)->set_block_style(__('Like H'.$i, 'sv100'));
+				$this->get_script( 'h'.$i )->set_path('lib/css/styles/like_h'.$i)->set_block_style(__('Like H'.$i, 'sv100'))->set_inline();
 			}
 
 			return $this;
